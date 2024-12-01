@@ -7,7 +7,7 @@ def animate(state):
     def update(i):
         if i: plt.cla()
         state.evolve()
-        plt.imshow(state.intensity, cmap='afmhot')
+        plt.imshow(state.intensity, cmap='afmhot', vmin=0, vmax=5)
         plt.title(f'frame {i}')
         
     anim = FuncAnimation(fig, update, interval=300, frames=30)
