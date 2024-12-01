@@ -2,7 +2,7 @@ import numpy as np
 import argparse
 
 from src.state import State
-from ui import animate
+from src.ui import animate
 
 def get_args():
    parser = argparse.ArgumentParser(description='Simulate a fire')
