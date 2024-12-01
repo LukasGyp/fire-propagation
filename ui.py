@@ -8,8 +8,8 @@ def animate(state, interval=300, frames=100):
         if i: plt.cla()
         state.evolve()
         plt.imshow(state.intensity, cmap='afmhot', vmin=0, vmax=5)
-        plt.title(f'frame {i}')
+        plt.title(f'frame {i}/{frames}')
         
     anim = FuncAnimation(fig, update, interval=interval, frames=frames)
-    anim.save('fire.gif', fps=60, writer='pillow')
+    anim.save('docs/fire.gif', fps=60, writer='pillow')
 
