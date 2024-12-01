@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt 
 from matplotlib.animation import FuncAnimation
 
-def animate(state, interval=300, frames=100):
+def animate(state, interval=20, frames=100, output=False):
     fig = plt.figure()
 
     def update(i):
@@ -13,5 +13,8 @@ def animate(state, interval=300, frames=100):
         plt.yticks([])
         
     anim = FuncAnimation(fig, update, interval=interval, frames=frames)
-    anim.save('docs/fire.gif', fps=60, writer='pillow')
+    if output:
+        anim.save('docs/fire.gif', fps=60, writer='pillow')
+    else:
+        plt.show()
 
