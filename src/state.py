@@ -1,11 +1,11 @@
 import numpy as np
-from propagate import calculate_interaction, convert_interaction_to_probability
+from .propagate import calculate_interaction, convert_interaction_to_probability
 
-FIRE_GROWTH_RATE = 1
+FIRE_GROWTH_RATE = 0.05
 
 class State:
     def __init__(self, size, wood_distribution):
-        self.size
+        self.size = size
         self.intensity = np.zeros(size)
         self.wood = wood_distribution
         self.initial_wood = wood_distribution.copy()
