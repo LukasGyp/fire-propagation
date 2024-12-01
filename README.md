@@ -1,1 +1,1 @@
-# ecosystem-simulation
+# fire-propagation
